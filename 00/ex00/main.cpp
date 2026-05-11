@@ -1,32 +1,35 @@
 #include "Account.hpp"
 #include "Bank.hpp"
 
+#define GREEN	"\033[32m"
+#define RED		"\033[31m"
+#define YELLOW	"\033[33m"
+#define BLUE	"\033[34m"
+#define RESET	"\033[0m"
+
 int main()
 {
-	// Account accountA = Account();
-	// accountA.id = 0;
-	// accountA.value = 100;
-
-	// Account accountB = Account();
-	// accountB.m_id = 1;
-	// accountB.m_value = 100;
-
-	// Bank bank = Bank();
-	// bank.m_liquidity = 999;
-	// bank.m_client_accounts.push_back(&accountA);
-	// bank.m_client_accounts.push_back(&accountB);
-
-	// bank.m_liquidity -= 200;
-	// accountA.value += 400;
-
-	// std::cout << "Account : " << std::endl;
-	// std::cout << accountA << std::endl;
-	// std::cout << accountB << std::endl;
-
-	// std::cout << " ----- " << std::endl;
-
-	// std::cout << "Bank : " << std::endl;
-	// std::cout << bank << std::endl;
-
+	Bank bank;
+	
+	std::cout << BLUE << "=== Creating Accounts ===" << RESET << std::endl;
+	bank.create_account(100);
+	bank.create_account(200);
+	
+	std::cout << YELLOW << "\n--- Bank State ---" << RESET << std::endl;
+	std::cout << bank << std::endl;
+	
+	std::cout << GREEN << "Deposit to Account 0:" << RESET << std::endl;
+	bank.deposit(0, 50);
+	
+	std::cout << GREEN << "Withdrawal from Account 1:" << RESET << std::endl;
+	bank.withdraw(1, 30);
+	
+	std::cout << YELLOW << "\n--- Updated Bank State ---" << RESET << std::endl;
+	std::cout << bank << std::endl;
+	
+	std::cout << RED << "Invalid Operations:" << RESET << std::endl;
+	bank.deposit(-1, 50);
+	bank.withdraw(0, 10000);
+	
 	return (0);
 }

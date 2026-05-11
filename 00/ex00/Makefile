@@ -1,4 +1,4 @@
-SRC = main.cpp DNC.cpp Account.cpp Bank.cpp
+SRC = main.cpp Account.cpp Bank.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
