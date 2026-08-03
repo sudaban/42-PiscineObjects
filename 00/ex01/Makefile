@@ -1,10 +1,10 @@
-SRC = main.cpp Account.cpp Bank.cpp
+SRC = main.cpp Vector2.cpp Graph.cpp
 OBJ = $(SRC:.cpp=.o)
 CC = c++
 RM = rm -f
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98
 
-NAME = dnc
+NAME = vector2_graph
 
 %.o: %.cpp
 	$(CC) $(CPPFLAGS) -c -o $@ $<
