@@ -7,15 +7,10 @@ Hammer::Hammer(void)
 	std::cout << "Hammer default constructor called" << std::endl;
 }
 
-Hammer::Hammer(const Hammer &p_other)
-	: Tool(p_other)
-{
-	std::cout << "Hammer copy constructor called" << std::endl;
-}
+Hammer::Hammer(const Hammer &p_other) : Tool(p_other) {}
 
 Hammer &Hammer::operator=(const Hammer &p_other)
 {
-	std::cout << "Hammer assignment operator called" << std::endl;
 	if (this != &p_other)
 		Tool::operator=(p_other);
 	return (*this);

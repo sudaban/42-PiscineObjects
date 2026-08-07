@@ -7,15 +7,10 @@ Shovel::Shovel(void)
 	std::cout << "Shovel default constructor called" << std::endl;
 }
 
-Shovel::Shovel(const Shovel &p_other)
-	: Tool(p_other)
-{
-	std::cout << "Shovel copy constructor called" << std::endl;
-}
+Shovel::Shovel(const Shovel &p_other) : Tool(p_other) {}
 
 Shovel &Shovel::operator=(const Shovel &p_other)
 {
-	std::cout << "Shovel assignment operator called" << std::endl;
 	if (this != &p_other)
 		Tool::operator=(p_other);
 	return (*this);

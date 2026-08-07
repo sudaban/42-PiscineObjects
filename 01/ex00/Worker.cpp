@@ -24,13 +24,10 @@ Worker::Worker(const Worker &p_other)
 	  m_stat(p_other.m_stat),
 	  m_tools(), m_workshops()
 {
-	std::cout << "Worker copy constructor called (name=" << m_name << ")"
-		<< std::endl;
 }
 
 Worker &Worker::operator=(const Worker &p_other)
 {
-	std::cout << "Worker assignment operator called" << std::endl;
 	if (this != &p_other)
 	{
 		m_name = p_other.m_name;

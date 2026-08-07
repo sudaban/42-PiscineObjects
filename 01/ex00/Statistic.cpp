@@ -16,12 +16,10 @@ Statistic::Statistic(int p_level, int p_exp)
 Statistic::Statistic(const Statistic &p_other)
 	: m_level(p_other.m_level), m_exp(p_other.m_exp)
 {
-	std::cout << "Statistic copy constructor called" << std::endl;
 }
 
 Statistic &Statistic::operator=(const Statistic &p_other)
 {
-	std::cout << "Statistic assignment operator called" << std::endl;
 	if (this != &p_other)
 	{
 		m_level = p_other.m_level;

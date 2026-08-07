@@ -29,12 +29,10 @@ Workshop::Workshop(const Workshop &p_other)
 	  m_required_tool(p_other.m_required_tool),
 	  m_workers()
 {
-	std::cout << "Workshop copy constructor called" << std::endl;
 }
 
 Workshop &Workshop::operator=(const Workshop &p_other)
 {
-	std::cout << "Workshop assignment operator called" << std::endl;
 	if (this != &p_other)
 	{
 		m_name = p_other.m_name;
